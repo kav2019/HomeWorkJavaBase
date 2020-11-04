@@ -4,12 +4,7 @@ public class Dog extends Animal {
     public static int dogsCount;
 
     public Dog(String name, double run_limit, double swim_limit, double jump_limit, int appetite){
-        setJump_limit(jump_limit);
-        setRun_limit(run_limit);
-        setSwim_limit(swim_limit);
-        setAppetite(appetite);
-        setName(name);
-        dogsCount++;
+        super(name, run_limit, swim_limit, jump_limit, appetite);
     }
 
 

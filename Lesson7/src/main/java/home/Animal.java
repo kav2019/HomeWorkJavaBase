@@ -8,6 +8,14 @@ public abstract class Animal {
     private String name;
     private boolean satiety;
 
+    public Animal(String name, double run_limit, double swim_limit, double jump_limit, int appetite){
+        this.name = name;
+        this.run_limit = run_limit;
+        this.swim_limit = swim_limit;
+        this.jump_limit = jump_limit;
+        this.appetite = appetite;
+    }
+
     public void isSatiety() {
         if(satiety == true){
             System.out.println("Хозяин я сытый!");

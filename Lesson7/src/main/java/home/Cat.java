@@ -4,12 +4,7 @@ public class Cat extends Animal {
     public static int catsCount;
 
     public Cat (String name, double run_limit, double swim_limit, double jump_limit, int appetite){
-        setRun_limit(run_limit);
-        setJump_limit(jump_limit);
-        setSwim_limit(jump_limit);
-        setAppetite(appetite);
-        setName(name);
-        catsCount++;
+        super(name, run_limit, swim_limit, jump_limit, appetite);
     }
 
     @Override
