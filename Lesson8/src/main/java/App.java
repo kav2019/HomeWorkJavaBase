@@ -43,7 +43,7 @@ public class App extends JFrame {
                         }
                     } else {
                         int countBomb = 0; // устанавливаем счетчик бомб
-                        if(ii == 0 && jj ==0){ //верхний левый угол
+                        if(ii == 0 && jj ==0){ //проверяем верхний левый угол
                             for (int m = 0; m <= ii + 1 ; m++){
                                 for (int k = 0; k <= jj + 1; k++){
                                     if (bombs[m][k] == true){
@@ -52,7 +52,7 @@ public class App extends JFrame {
                                 }
                             }
                         }
-                        if ( ii == 0 && jj == SIZE -1){ //верхний правый угол
+                        if ( ii == 0 && jj == SIZE -1){ //проверяем верхний правый угол
                             for (int m = 0; m <= ii ; m++){
                                 for (int k = jj - 1; k <= jj; k++){
                                     if (bombs[m][k] == true){
@@ -61,7 +61,7 @@ public class App extends JFrame {
                                 }
                             }
                         }
-                        if ( ii == SIZE -1  && jj == 0){ //нижний левый угол
+                        if ( ii == SIZE -1  && jj == 0){ //проверяем нижний левый угол
                             for (int m = ii - 1; m <= ii ; m++){
                                 for (int k = 0; k <= jj + 1; k++){
                                     if (bombs[m][k] == true){
@@ -70,7 +70,7 @@ public class App extends JFrame {
                                 }
                             }
                         }
-                        if ( ii == SIZE -1  && jj == SIZE - 1){ //нижний правый угол
+                        if ( ii == SIZE -1  && jj == SIZE - 1){ //проверяем нижний правый угол
                             for (int m = ii - 1; m <= ii ; m++){
                                 for (int k = jj - 1; k <= jj ; k++){
                                     if (bombs[m][k] == true){
@@ -79,7 +79,7 @@ public class App extends JFrame {
                                 }
                             }
                         }
-                        if (ii > 0 && jj > 0 && jj < SIZE - 1 && ii < SIZE - 1) { //если в центре
+                        if (ii > 0 && jj > 0 && jj < SIZE - 1 && ii < SIZE - 1) { //проверяем если в центре
                             for (int k = ii - 1; k <= ii + 1; k++) {
                                 for (int m = jj - 1; m <= jj + 1; m++) {
                                     if (bombs[k][m] == true) {
@@ -88,7 +88,7 @@ public class App extends JFrame {
                                 }
                             }
                         }
-                        if ( ii > 1 && ii < SIZE - 1  && jj == 0){ //если в центре слева
+                        if ( ii > 1 && ii < SIZE - 1  && jj == 0){ //проверяем если в центре слева
                             for (int k = ii - 1; k <= ii + 1; k++) {
                                 for (int m = 0; m <= jj + 1; m++) {
                                     if (bombs[k][m] == true) {
@@ -97,7 +97,7 @@ public class App extends JFrame {
                                 }
                             }
                         }
-                        if ( ii == 0  && jj > 0 && jj < SIZE - 1){ //если в центре сверху
+                        if ( ii == 0  && jj > 0 && jj < SIZE - 1){ //проверяем если в центре сверху
                             for (int k = 0; k <= ii + 1; k++) {
                                 for (int m = jj-1; m <= jj+1; m++) {
                                     if (bombs[k][m] == true) {
@@ -106,7 +106,7 @@ public class App extends JFrame {
                                 }
                             }
                         }
-                        if (ii == SIZE -1 && jj > 0 && jj < SIZE -1){ //если в центре внизу
+                        if (ii == SIZE -1 && jj > 0 && jj < SIZE -1){ //проверяем если в центре внизу
                             for(int k = ii -1; k <= ii; k++){
                                 for (int m = jj - 1; m <= jj+1 ; m++){
                                     if (bombs[k][m] == true){
@@ -115,9 +115,7 @@ public class App extends JFrame {
                                 }
                             }
                         }
-
-
-                        if ( jj == SIZE - 1  && ii > 0 && ii < SIZE - 1){ //если в центре справа
+                        if ( jj == SIZE - 1  && ii > 0 && ii < SIZE - 1){ //проверяем если в центре справа
                             for (int k = ii - 1; k <= ii+1; k++) {
                                 for (int m = jj-1; m <= jj; m++) {
                                     if (bombs[k][m] == true) {
@@ -126,18 +124,6 @@ public class App extends JFrame {
                                 }
                             }
                         }
-
-//                        if (ii == 0 && jj < SIZE) { //если вверху
-//                            for (int k = 0; k <= jj + 1; k++) {
-//                                if (bombs[0][k] == true ) {
-//                                    countBomb++;
-//                                }
-//                                if(bombs[1][k] == true){
-//                                    countBomb++;
-//                                }
-//                            }
-//                        }
-
                         button.setText(String.valueOf(countBomb));
                         button.setBackground(Color.GREEN);
                     }
